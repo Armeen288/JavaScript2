@@ -1,0 +1,16 @@
+<html>
+
+<body>
+<h1>JSON converstion</h1>
+<p id="a"></p>
+<script>
+    var a = {name:"Armeen", age: 12, city: "Islamabad"}
+    var myJSON= JSON.stringify(a);
+    document.getElementById("a").innerHTML= myJSON.name
+    var b= JSON.parse(myJSON);
+    document.getElementById("a").innerHTML = b.name 
+</script>
+
+</body>
+
+</html>
