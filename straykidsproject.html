@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>StrayKids | Official Fan Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #0c0c0c;
+            color: #f0f0f0;
+        }
+
+        nav {
+            background-color: #111;
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: #e50914;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #e50914;
+        }
+
+        header {
+            background-image: url('https://i.pinimg.com/originals/1e/f4/6c/1ef46ccf7485020da1bff4892c2b9e6d.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.3em;
+            color: #f1c40f;
+        }
+
+        section {
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        .slider-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slides img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+
+        .nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            background-color: rgba(0, 0, 0, 0.4);
+            color: white;
+            border: none;
+            padding: 10px 16px;
+            cursor: pointer;
+            z-index: 1;
+            border-radius: 50%;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        .dots {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .dot {
+            height: 12px;
+            width: 12px;
+            margin: 0 4px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.3s;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background-color: #e50914;
+        }
+
+        .about {
+            background-color: #1a1a1a;
+            border-radius: 12px;
+            padding: 20px;
+            line-height: 1.6;
+            color: #ddd;
+            box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+        }
+
+        footer {
+            background-color: #111;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        @media screen and (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+
+            header h1 {
+                font-size: 2.2em;
+            }
+
+            .slides img {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">StrayKids</div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Welcome to the World of Stray Kids</h1>
+        <p>Stray Kids everywhere all around the world 🌎</p>
+    </header>
+
+    <section id="gallery">
+        <h2>🎤 Stray Kids Gallery</h2>
+        <div class="slider-container">
+            <button class="nav-btn prev" onclick="changeSlide(-1)">❮</button>
+            <div class="slides" id="slides">
+                <img src="https://images.unsplash.com/photo-1600076253520-27ac2f8e4b5a?fit=crop&w=1000&q=80"
+                    alt="Concert">
+                <img src="https://images.unsplash.com/photo-1606741965424-4f0b50ae632b?fit=crop&w=1000&q=80"
+                    alt="Crowd">
+                <img src="https://images.unsplash.com/photo-1626822350295-89e6247e29e3?fit=crop&w=1000&q=80"
+                    alt="Stage">
+                <img src="https://images.unsplash.com/photo-1619694866257-232da18a5693?fit=crop&w=1000&q=80"
+                    alt="Light show">
+
+
+            </div>
+            <button class="nav-btn next" onclick="changeSlide(1)">❯</button>
+        </div>
+        <div class="dots" id="dots"></div>
+    </section>
+
+    <section class="about" id="about">
+        <h2>📣 About Stray Kids</h2>
+        <p>
+            Stray Kids is a South Korean boy band formed by JYP Entertainment. Known for their bold concepts and
+            self-produced music, they’ve captured the hearts of fans worldwide. From intense rap to emotional vocals,
+            Stray Kids brings energy and authenticity to every performance.
+        </p>
+        <p>
+            With members Bang Chan, Lee Know, Changbin, Hyunjin, Han, Felix, Seungmin, and I.N, the group continues to
+            redefine the K-pop genre with each comeback.
+        </p>
+    </section>
+
+    <footer id="contact">
+        © 2025 StrayKids Fan Page | Stay strong ✨
+    </footer>
+
+    <script>
+        const slides = document.getElementById("slides");
+        const totalSlides = slides.children.length;
+        let currentIndex = 0;
+
+        const dotsContainer = document.getElementById("dots");
+
+        for (let i = 0; i < totalSlides; i++) {
+            const dot = document.createElement("span");
+            dot.classList.add("dot");
+            if (i === 0) dot.classList.add("active");
+            dot.addEventListener("click", () => moveToSlide(i));
+            dotsContainer.appendChild(dot);
+        }
+
+        function updateDots(index) {
+            const dots = document.querySelectorAll(".dot");
+            dots.forEach(dot => dot.classList.remove("active"));
+            dots[index].classList.add("active");
+        }
+
+        function changeSlide(direction) {
+            currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
+            slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+            updateDots(currentIndex);
+        }
+
+        function moveToSlide(index) {
+            currentIndex = index;
+            slides.style.transform = `translateX(-${index * 100}%)`;
+            updateDots(index);
+        }
+
+        setInterval(() => changeSlide(1), 5000);
+    </script>
+</body>
+
+</html>

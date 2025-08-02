@@ -52,7 +52,59 @@
         .navbar ul li a:hover{
             background-color: #ffffff;
             color: #333;
+
         }
+        .slider-container {
+            position: relative;
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .slides{
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .slides img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 10;
+        }
+        .prev{
+            left: 10px;
+        }
+        .next{
+            right: 10px;
+        }
+        .dots {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .dot {
+            height: 12px;
+            width: 12px;
+            margin: 0 4px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.3s;
+            cursor: pointer;
+        }
+        .dot.active {
+            background-color: #782424;
+        }
+       
+
     </style>
 </head>
 <body>
@@ -65,5 +117,34 @@
         <li><a href="#contact">Contact Us</a></li>
      </ul>
     </nav>
-</body>
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="slider-container">
+            <button class="nav-btn prev" onclick="changeSlide(-1)">❮</button>
+            <div class="slides" id="slides">
+                <img src="skz1.jpg" alt="Stray Kids Image 1">
+                <img src="skz22.jpg" alt="Stray Kids Image 2">   
+                <img src="skz33.jpg" alt="Stray Kids Image 3">
+                <img src="skz4.jpg" alt="Stray Kids Image 4">
+
+        </div>
+
+            <button class="nav-btn next" onclick="changeSlide(1)">❯</button>
+        </div>
+        <div class="dots" id="dots">
+            <script>
+                const slides=document.getElementById("slides");
+                const totalSlides = slides.children.length;
+                let currentIndex = 0;
+                const dotsContainer = document.getElementById("dots");
+                for(let i=0; i <totalSlides>; i++){
+                    const dot = document.createElement("span");
+                    dot.classList.add("dot");
+                }
+                    if (i==0) dot.classList.add("active");
+                    dot.addEventListener("click", () => movetoSlide(i));
+
+            </script>
+        
+    </section>
 </html>
