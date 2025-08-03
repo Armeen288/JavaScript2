@@ -112,7 +112,7 @@
      <div class="logo">MyWebsite</div>
      <ul>
         <li><a href="#home" class= "active">Home</a></li>
-        <li><a href="#about">About Us</a></li>
+        <li><a href="websiteabout.html">About Us</a></li>
         <li><a href="#gallery">Gallery</a></li>
         <li><a href="#contact">Contact Us</a></li>
      </ul>
@@ -137,12 +137,19 @@
                 const totalSlides = slides.children.length;
                 let currentIndex = 0;
                 const dotsContainer = document.getElementById("dots");
-                for(let i=0; i <totalSlides>; i++){
+                for(let i=0; i <totalSlides> i++){
                     const dot = document.createElement("span");
                     dot.classList.add("dot");
+                     if (i==0) dot.classList.add("active");
+                    dot.addEventListener("click", () => movetoSlide(i))
+                    dotsContainer.appendChild(dot);
+                
                 }
-                    if (i==0) dot.classList.add("active");
-                    dot.addEventListener("click", () => movetoSlide(i));
+                 function updateDots(index) {
+                        const dots = document.querySelectorAll(".dot");
+                        dots.forEach(dot => dot.classList.remove("active"));
+                        dots[index].classList.add("active");
+                 }
 
             </script>
         

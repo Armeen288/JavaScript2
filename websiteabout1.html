@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Stray Kids | About the Band</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #000;
+            color: #f0f0f0;
+            animation: fadeIn 1.2s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        header {
+            background-color: #8b0000;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 10px #111;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3.2em;
+            color: #fff;
+            animation: slideIn 1s ease-out;
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .container {
+            padding: 30px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .bio {
+            text-align: center;
+            line-height: 1.8;
+            animation: zoomIn 1.2s ease;
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .members {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .member-card {
+            background: #111;
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+            transition: transform 0.4s ease, background 0.4s;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .member-card:hover {
+            transform: scale(1.05);
+            background: #222;
+        }
+
+        .member-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px #000;
+        }
+
+        .member-card h3 {
+            margin-top: 10px;
+            color: #ff4d4d;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .extra-images {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 60px;
+        }
+
+        .extra-images img {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s;
+            box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+        }
+
+        .extra-images img:hover {
+            transform: scale(1.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #111;
+            color: #999;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Stray Kids</h1>
+    </header>
+
+    <div class="container">
+        <section class="bio">
+            <h2>About the Band</h2>
+            <p>Stray Kids is a South Korean boy band formed by JYP Entertainment. Known for their high-energy
+                performances, meaningful lyrics, and self-produced tracks, they’ve gained global recognition. STAY —
+                their fandom — supports them through every comeback and tour.</p>
+        </section>
+
+        <section class="members">
+            <div class="member-card">
+                <img src="https://cdn.shopify.com/s/files/1/0469/3927/5428/files/Chan_Nylon.png?v=1710858079"
+                    alt="Bang Chan">
+                <h3>Bang Chan</h3>
+                <p>Leader, Producer, Vocalist</p>
+            </div>
+            <div class="member-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqt4iYzJY--5oJkzOgWfdF4kBRMXt184dKyg&s"
+                    alt="Lee Know">
+                <h3>Lee Know</h3>
+                <p>Main Dancer, Vocalist</p>
+            </div>
+            <div class="member-card">
+                <img src="https://i.pinimg.com/736x/c0/60/ce/c060ce62ea7b0e65344af087a2e4c413.jpg" alt="Changbin">
+                <h3>Changbin</h3>
+                <p>Main Rapper, Producer</p>
+            </div>
+            <div class="member-card">
+                <img src="https://assets.teenvogue.com/photos/63403a02741d4e9d391116dc/1:1/w_3349,h_3349,c_limit/1425441462"
+                    alt="Hyunjin">
+                <h3>Hyunjin</h3>
+                <p>Main Dancer, Visual</p>
+            </div>
+            <div class="member-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDZz2SADnP2mit9K2BVralFQUta6X4ai-laA&s"
+                    alt="Han">
+                <h3>Han</h3>
+                <p>Main Rapper, Producer</p>
+            </div>
+            <div class="member-card">
+                <img src="https://i.pinimg.com/736x/ee/01/9d/ee019dfd9f2bac72a5a0dd6ed86caf19.jpg" alt="Felix">
+                <h3>Felix</h3>
+                <p>Dancer, Rapper</p>
+            </div>
+            <div class="member-card">
+                <img src="data:image/jpeg;base64,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"
+                    alt="Seungmin">
+                <h3>Seungmin</h3>
+                <p>Main Vocalist</p>
+            </div>
+            <div class="member-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8TlEOIE71juU3Svo6QCw4DDskKcleRrJwqQ&s"
+                    alt="I.N">
+                <h3>I.N</h3>
+                <p>Vocalist, Maknae</p>
+            </div>
+        </section>
+
+        <div class="extra-images">
+            <img src="https://www.billboard.com/wp-content/uploads/2024/08/stray-kids-lollapalooza-chicago-2024-billboard-1548.jpg?w=942&h=628&crop=1"
+                alt="Stray Kids Live">
+            <img src="https://www.musicplaza.com/cdn/shop/products/stray_kids_i_am_you_A.jpg?v=1556610360&width=1780"
+                alt="Stray Kids Concept">
+            <img src="https://nolae.eu/cdn/shop/products/stray-kids-noeasy-poster-nolae-120533.jpg?v=1635570822"
+                alt="Stray Kids Poster">
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Stray Kids Created with ❤️ for STAYs.</p>
+    </footer>
+
+</body>
+
+</html>
