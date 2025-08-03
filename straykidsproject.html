@@ -8,12 +8,14 @@
         body {
             margin: 0;
             font-family: 'Segoe UI', sans-serif;
-            background-color: #0c0c0c;
+            background-color: #000000;
             color: #f0f0f0;
+             background: linear-gradient(to right, #841f1f, #000000);
+        
         }
 
         nav {
-            background-color: #111;
+            background-color: #000000;
             color: white;
             padding: 15px 30px;
             display: flex;
@@ -25,7 +27,7 @@
             font-size: 1.8em;
             font-weight: bold;
             letter-spacing: 2px;
-            color: #e50914;
+            color: #000000;
         }
 
         nav ul {
@@ -37,14 +39,14 @@
         }
 
         nav ul li a {
-            color: white;
+            color: rgb(142, 47, 47);
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s;
         }
 
         nav ul li a:hover {
-            color: #e50914;
+            color: #744143;
         }
 
         header {
@@ -63,7 +65,7 @@
 
         header p {
             font-size: 1.3em;
-            color: #f1c40f;
+            color: #000000;
         }
 
         section {
@@ -135,7 +137,7 @@
         }
 
         .dot.active {
-            background-color: #e50914;
+            background-color: #ffffff;
         }
 
         .about {
@@ -180,29 +182,25 @@
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#about">About</a></li>
+            <li><a href="websiteabout.html">About</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
     <header>
-        <h1>Welcome to the World of Stray Kids</h1>
-        <p>Stray Kids everywhere all around the world 🌎</p>
+        <h1>Straykids Megaverse</h1>
+
     </header>
 
     <section id="gallery">
-        <h2>🎤 Stray Kids Gallery</h2>
+        <h2>StrayKids</h2>
         <div class="slider-container">
             <button class="nav-btn prev" onclick="changeSlide(-1)">❮</button>
             <div class="slides" id="slides">
-                <img src="https://images.unsplash.com/photo-1600076253520-27ac2f8e4b5a?fit=crop&w=1000&q=80"
-                    alt="Concert">
-                <img src="https://images.unsplash.com/photo-1606741965424-4f0b50ae632b?fit=crop&w=1000&q=80"
-                    alt="Crowd">
-                <img src="https://images.unsplash.com/photo-1626822350295-89e6247e29e3?fit=crop&w=1000&q=80"
-                    alt="Stage">
-                <img src="https://images.unsplash.com/photo-1619694866257-232da18a5693?fit=crop&w=1000&q=80"
-                    alt="Light show">
+                <img src="skz1.jpg" >
+                <img src="skz22.jpg">
+                <img src="skz33.jpg">
+                <img src="skz4.jpg">
 
 
             </div>
@@ -210,25 +208,7 @@
         </div>
         <div class="dots" id="dots"></div>
     </section>
-
-    <section class="about" id="about">
-        <h2>📣 About Stray Kids</h2>
-        <p>
-            Stray Kids is a South Korean boy band formed by JYP Entertainment. Known for their bold concepts and
-            self-produced music, they’ve captured the hearts of fans worldwide. From intense rap to emotional vocals,
-            Stray Kids brings energy and authenticity to every performance.
-        </p>
-        <p>
-            With members Bang Chan, Lee Know, Changbin, Hyunjin, Han, Felix, Seungmin, and I.N, the group continues to
-            redefine the K-pop genre with each comeback.
-        </p>
-    </section>
-
-    <footer id="contact">
-        © 2025 StrayKids Fan Page | Stay strong ✨
-    </footer>
-
-    <script>
+     <script>
         const slides = document.getElementById("slides");
         const totalSlides = slides.children.length;
         let currentIndex = 0;

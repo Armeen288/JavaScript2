@@ -103,7 +103,8 @@
         .dot.active {
             background-color: #782424;
         }
-       
+     
+           
 
     </style>
 </head>
@@ -132,26 +133,40 @@
             <button class="nav-btn next" onclick="changeSlide(1)">❯</button>
         </div>
         <div class="dots" id="dots">
-            <script>
-                const slides=document.getElementById("slides");
-                const totalSlides = slides.children.length;
-                let currentIndex = 0;
-                const dotsContainer = document.getElementById("dots");
-                for(let i=0; i <totalSlides> i++){
-                    const dot = document.createElement("span");
-                    dot.classList.add("dot");
-                     if (i==0) dot.classList.add("active");
-                    dot.addEventListener("click", () => movetoSlide(i))
-                    dotsContainer.appendChild(dot);
-                
-                }
-                 function updateDots(index) {
-                        const dots = document.querySelectorAll(".dot");
-                        dots.forEach(dot => dot.classList.remove("active"));
-                        dots[index].classList.add("active");
-                 }
+        <script>
+            const slides = document.getElementById("slides");
+            const totalSlides = slides.children.length;
+            let currentIndex = 0;
 
-            </script>
-        
+            const dotsContainer = document.getElementById("dots");
+
+            for (let i = 0; i < totalSlides; i++) {
+                const dot = document.createElement("span");
+                dot.classList.add("dot");
+                if (i === 0) dot.classList.add("active");
+                dot.addEventListener("click", () => moveToSlide(i));
+                dotsContainer.appendChild(dot);
+            }
+
+            function updateDots(index) {
+                const dots = document.querySelectorAll(".dot");
+                dots.forEach(dot => dot.classList.remove("active"));
+                dots[index].classList.add("active");
+            }
+
+            function changeSlide(direction) {
+                currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
+                slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+                updateDots(currentIndex);
+            }
+
+            function moveToSlide(index) {
+                currentIndex = index;
+                slides.style.transform = `translateX(-${index * 100}%)`;
+                updateDots(index);
+            }
+
+            setInterval(() => changeSlide(1), 5000);
+        </script>
     </section>
 </html>
