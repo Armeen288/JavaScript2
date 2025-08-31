@@ -27,7 +27,7 @@
         .topnav a.active {
             background-color: rgb(120, 11, 33);
         }
-        
+
     </style>
 </head>
 <body>
@@ -37,5 +37,28 @@
         <a class="active" href="#contact">Contact</a>
         <a class="active" href="#gallery">Gallery</a>
     </div>
+    <section>
+        <img class="mySlides" src="skz1.jpg" style="height: 500px">
+        <img class="mySlides" src="skz22.jpg" style="height: 500px">
+        <img class="mySlides" src="skz33.jpg" style="height: 500px">
+       
+    </section>
 </body>
+<script>
+    var myIndex = 0;
+    carousel();
+
+function carousel(){
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for(i=0; i<x.length; i++){
+        x[i].style.display = "none";
+    }
+    myIndex++
+    if(myIndex > x.length){myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 2000);
+}
+    
+</script>
 </html>
